@@ -49,7 +49,7 @@ bash scripts/eval_lora.sh ckpt_path adaptor_path
 
 ## 3. Main Results
 
-+ Zero-shot performance and Perplexity of the compressed LLaMA3.2-1.2B models, which are finetuned on the LaMini dataset using LoRA for 2 epochs.
++ **Zero-shot performance and Perplexity**
 
 | Ratio | Method         |   PPL↓    |   ARCe    |   ARCc    |   BOOLQ   |   Crows   |   OBQA   |   PIQA    |   Race    |   SIQA    |    TQA    |   Wino    | Average↑  |
 | :---: | :------------- | :-------: | :-------: | :-------: | :-------: | :-------: | :------: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: |
@@ -73,7 +73,7 @@ bash scripts/eval_lora.sh ckpt_path adaptor_path
 |       | LoRAPrune [47] | **68.63** |   24.57   | **44.36** |   60.73   |   54.32   |   24.4   |   60.50   |   28.52   |   37.87   |   41.38   |   52.33   |   42.90   |
 |       | SDMPrune(ours) |   70.12   | **26.02** |   42.63   | **65.38** |   52.59   |   25.6   | **63.44** | **32.25** | **38.74** |   43.30   | **52.17** | **44.21** |
 
-+ Zero-shot performance of other small-scale LLMs and ours
++ **Comparison to other small-scale LLMs**
 
   | Model Name                     | #Params  | ARC-e    | ARC-c    | BOOLQ    | Crows    | OBQA     | PIQA     | Race     | SIQA     | TFIQA    | Wino     | Average  |
   | ------------------------------ | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
