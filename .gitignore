@@ -1,0 +1,9 @@
+*__pycache__*
+backup/*
+out/*
+out
+.vscode/*
+*.out
+test.py
+third_party/*
+wandb/*
