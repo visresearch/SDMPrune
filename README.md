@@ -10,7 +10,44 @@ The gradient computation with one-hot labels ignore the potential predictions on
 
 ![](./images/motivation.png)
 
-## 2. Main Results
+
+
+## 2. Quick Start
+
+### 2.1 Installation
+```
+conda create -n SDMPrune python=3.9
+pip install -r requirement.txt
+```
+
+### 2.2 Prune LLMs
+
+```
+bash scripts/prune.sh
+```
+This script would compress the LLaMA3.2-1B model. You need to download [LLaMA3.2-1B](https://huggingface.co/meta-llama/Llama-3.2-1B) pretrained weights. The dataset would be automatically downloaded and sampled.
+
+
+
+### 2.3 Train LLMs
+
+```
+bash scripts/run.sh
+```
+This script would compress the LLaMA3.2-1B model. You need to download [LLaMA3.2-1B](https://huggingface.co/meta-llama/Llama-3.2-1B) pretrained weights. The dataset would be automatically downloaded and sampled.
+
+
+
+### 2.4 Evaluate results
+
+```
+bash scripts/eval_full.sh ckpt_path
+bash scripts/eval_lora.sh ckpt_path adaptor_path
+```
+
+
+
+## 3. Main Results
 
 + Zero-shot performance and Perplexity of the compressed LLaMA3.2-1.2B models, which are finetuned on the LaMini dataset using LoRA for 2 epochs.
 
@@ -49,43 +86,6 @@ The gradient computation with one-hot labels ignore the potential predictions on
   | Opt1.3B [49]                   | 1.3B     | 27.8     | 51.2     | 57.2     | **65.8** | 32.6     | 70.9     | 34.2     | 40.4     | 38.7     | 59.4     | 47.8     |
   | MobiLLaMA1.2B [41]             | 1.2B     | 31.8     | 56.5     | 60.3     | 64.1     | 34.8     | 74.8     | 34.9     | 42.0     | 35.2     | 59.3     | 49.4     |
   | **SDMPrune (ours, ratio=20%)** | **1.0B** | **35.0** | **59.3** | **72.7** | 60.5     | 34.6     | 72.4     | **37.0** | **44.2** | 39.7     | 58.5     | **51.4** |
-
-
-
-## 3. Quick Start
-
-### Installation
-```
-conda create -n SDMPrune python=3.9
-pip install -r requirement.txt
-```
-
-
-
-### Prune LLMs
-
-```
-bash scripts/prune.sh
-```
-This script would compress the LLaMA3.2-1B model. You need to download [LLaMA3.2-1B](https://huggingface.co/meta-llama/Llama-3.2-1B) pretrained weights. The dataset would be automatically downloaded and sampled.
-
-
-
-### Train LLMs
-
-```
-bash scripts/run.sh
-```
-This script would compress the LLaMA3.2-1B model. You need to download [LLaMA3.2-1B](https://huggingface.co/meta-llama/Llama-3.2-1B) pretrained weights. The dataset would be automatically downloaded and sampled.
-
-
-
-### Evaluate results
-
-```
-bash scripts/eval_full.sh ckpt_path
-bash scripts/eval_lora.sh ckpt_path adaptor_path
-```
 
 
 
