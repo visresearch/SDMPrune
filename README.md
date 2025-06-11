@@ -2,7 +2,7 @@
 
 This repository is the official implementation of "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models".
 
-[[Paper]()]    [[BibTex](#Citation)]    [[Blog]()]    [[HuggingFace](https://huggingface.co/visresearch/SDMPrune/tree/main)]
+[[Paper]()]    [[BibTex](#Citation)]    [[HuggingFace](https://huggingface.co/visresearch/SDMPrune/tree/main)]
 
 ## 1. Introduction
 
